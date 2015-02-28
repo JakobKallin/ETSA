@@ -1,0 +1,2 @@
+/* Processed and cached by Shaun Inman's CSS Cacheer (with ServerImport, Base64, BasedOn, Constants, NestedSelectors & Pretty enabled) on Wed, 27 Oct 2010 15:33:19 +0000 <http://shauninman.com/search/?q=cacheer> */
+#page h1{	text-align: center;}#content p{	font-size: 15px;	line-height: 28px;	font-style: italic;	font-family: Cambria, Georgia, serif;	color: #8c8c8c;	text-align: center;}#content img{	margin: 25px auto;}

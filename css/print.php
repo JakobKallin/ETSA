@@ -1,0 +1,2 @@
+/* Processed and cached by Shaun Inman's CSS Cacheer (with ServerImport, Base64, BasedOn, Constants, NestedSelectors & Pretty enabled) on Sun, 04 Dec 2011 10:29:08 +0000 <http://shauninman.com/search/?q=cacheer> */
+div.blurb{	margin: 0;	border: 0;}

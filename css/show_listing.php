@@ -1,0 +1,2 @@
+/* Processed and cached by Shaun Inman's CSS Cacheer (with ServerImport, Base64, BasedOn, Constants, NestedSelectors & Pretty enabled) on Wed, 02 Mar 2011 23:19:21 +0000 <http://shauninman.com/search/?q=cacheer> */
+h2{	font-size: 17px;	margin-top: 15px;	margin-bottom: 5px;}h3{	font-size: 13px;}td.day{	width: 5%;}td.venue{	width: 35%;}td.location{	width: 25%;}td.notes{	width: 25%;}td.forum{	width: 5%;}ol.setlist{	color: #8c8c8c;}ol.setlist li{	margin: 0;}

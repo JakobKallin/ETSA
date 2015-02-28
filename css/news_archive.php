@@ -1,0 +1,2 @@
+/* Processed and cached by Shaun Inman's CSS Cacheer (with ServerImport, Base64, BasedOn, Constants, NestedSelectors & Pretty enabled) on Wed, 27 Oct 2010 16:17:47 +0000 <http://shauninman.com/search/?q=cacheer> */
+#content th,#content td{	padding: 10px 8px;}#content td.date{	width: 7%;	color: #77cc66;}#content td.year{	width: 6%;	color: #77cc66;}#content td.headline{	width: 22%;}#content td.text{	width: 65%;}#content td.text > p:first-child{	margin-top: 0;}

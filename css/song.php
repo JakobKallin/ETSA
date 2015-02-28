@@ -1,0 +1,2 @@
+/* Processed and cached by Shaun Inman's CSS Cacheer (with ServerImport, Base64, BasedOn, Constants, NestedSelectors & Pretty enabled) on Wed, 10 Nov 2010 20:17:57 +0000 <http://shauninman.com/search/?q=cacheer> */
+#video{	float: right;	margin: 0 0 25px 10px;}#video h2{	visibility: hidden;}#video #video-display object,#video #video-display embed{	width: 350px;	height: 280px;}
