@@ -16,7 +16,7 @@ function map_path($path, $callback) {
 }
 
 map_path('.', function($path) {
-	alter_dom($path, 'remove_quiz_link');
+	alter_dom($path, 'remove_statistics_link');
 });
 
 function alter_contents($path, $callback) {
@@ -60,6 +60,13 @@ function remove_contact_link($doc) {
 function remove_quiz_link($doc) {
 	$xq = new DomXPath($doc);
 	$link = $xq->query('//li[a[@href="/other/quizzes/"]]')->item(0);
+	if ( $link ) {
+		$link->parentNode->removeChild($link);
+	}
+}
+
+function remove_statistics_link($doc) {
+	$link = $doc->getElementById('menu-statistics');
 	if ( $link ) {
 		$link->parentNode->removeChild($link);
 	}
