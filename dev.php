@@ -16,7 +16,7 @@ function map_path($path, $callback) {
 }
 
 map_path('.', function($path) {
-	alter_dom($path, 'remove_statistics_link');
+	alter_dom($path, 'remove_show_page_statistics_link');
 });
 
 function alter_contents($path, $callback) {
@@ -67,6 +67,14 @@ function remove_quiz_link($doc) {
 
 function remove_statistics_link($doc) {
 	$link = $doc->getElementById('menu-statistics');
+	if ( $link ) {
+		$link->parentNode->removeChild($link);
+	}
+}
+
+function remove_show_page_statistics_link($doc) {
+	$xq = new DomXPath($doc);
+	$link = $xq->query('//a[text()="(more statistics)"]')->item(0);
 	if ( $link ) {
 		$link->parentNode->removeChild($link);
 	}
