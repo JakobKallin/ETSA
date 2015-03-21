@@ -16,7 +16,7 @@ function map_path($path, $callback) {
 }
 
 map_path('.', function($path) {
-	alter_dom($path, 'remove_upcoming_show_count');
+	alter_dom($path, 'remove_dynamic_record_preview_content');
 });
 
 function alter_contents($path, $callback) {
@@ -85,5 +85,25 @@ function remove_upcoming_show_count($doc) {
 	$count = $xq->query('//a[@href="/shows/#upcoming"]//span[@class="recent"]')->item(0);
 	if ( $count ) {
 		$count->parentNode->removeChild($count);
+	}
+}
+
+function remove_dynamic_record_preview_content($doc) {
+	$xq = new DomXPath($doc);
+	$nodes = $xq->query('//div[@class="preview"]//tr[.//th[text()="Trivia"]]');
+	foreach ( $nodes as $node ) {
+		$node->parentNode->removeChild($node);
+	}
+	
+	$xq = new DomXPath($doc);
+	$nodes = $xq->query('//div[@class="preview"]//tr[.//th[text()="Charts"]]');
+	foreach ( $nodes as $node ) {
+		$node->parentNode->removeChild($node);
+	}
+	
+	// Remove remaining empty tables.
+	$nodes = $xq->query('//div[@class="preview"][not(.//tr)]');
+	foreach ( $nodes as $node ) {
+		$node->parentNode->removeChild($node);
 	}
 }
