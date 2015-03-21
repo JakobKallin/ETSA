@@ -16,7 +16,7 @@ function map_path($path, $callback) {
 }
 
 map_path('.', function($path) {
-	alter_dom($path, 'remove_show_page_statistics_link');
+	alter_dom($path, 'remove_upcoming_show_count');
 });
 
 function alter_contents($path, $callback) {
@@ -77,5 +77,13 @@ function remove_show_page_statistics_link($doc) {
 	$link = $xq->query('//a[text()="(more statistics)"]')->item(0);
 	if ( $link ) {
 		$link->parentNode->removeChild($link);
+	}
+}
+
+function remove_upcoming_show_count($doc) {
+	$xq = new DomXPath($doc);
+	$count = $xq->query('//a[@href="/shows/#upcoming"]//span[@class="recent"]')->item(0);
+	if ( $count ) {
+		$count->parentNode->removeChild($count);
 	}
 }
